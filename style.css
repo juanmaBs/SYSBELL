@@ -614,3 +614,16 @@ video {
     filter: brightness(1.2);
     box-shadow: 0 0 30px currentColor;
 }
+.ia-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .ia-layout {
+        grid-template-columns: 1fr;
+    }
+}
