@@ -613,195 +613,88 @@ video {
     transform: translateY(-8px); /* Se eleva un poco más */
     filter: brightness(1.2);
     box-shadow: 0 0 30px currentColor;
-}
-.ia-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-    padding: 20px;
-}
-
-@media (max-width: 900px) {
-    .ia-layout {
-        grid-template-columns: 1fr;
-    }
-/* Ajustes de Layout */
-.ia-main-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.ia-visual, .ia-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Importar fuente elegante al inicio de tu CSS */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
-
-.premium-gold-card {
-    background: #0d0d0d !important;
-    border: 1px solid #c5a059 !important; /* Dorado champagne */
+/* --- RECUPERACIÓN DISEÑO PREMIUM SYSBELL --- */
+.sysbell-premium-card {
+    background: #0a0a0a !important;
+    border: 1px solid #c5a059 !important;
+    padding: 30px !important;
     border-radius: 20px;
-    padding: 50px !important;
-    font-family: 'Poppins', sans-serif;
 }
 
-.sysbell-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-.sysbell-title span {
-    color: #c5a059;
-    font-style: italic;
-}
-
-.sysbell-tagline {
-    color: #c5a059;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.ia-flex-container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.ia-visual-side, .ia-text-side {
-    flex: 1;
-    min-width: 300px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
-
-/* Contenedor Principal */
-.premium-section {
-    background: #050505;
-    padding: 60px 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.premium-card {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #0f0f0f;
-    border: 1px solid #c5a059;
-    border-radius: 25px;
-    padding: 40px;
-    position: relative;
-    box-shadow: 0 10px 50px rgba(0,0,0,0.5);
-}
-
-.star-label {
+.gold-badge {
     background: #c5a059;
     color: #000;
-    font-weight: bold;
     font-size: 10px;
-    padding: 5px 15px;
-    border-radius: 50px;
-    width: fit-content;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 4px;
+    letter-spacing: 1px;
 }
 
-/* Layout Flexible */
-.premium-content {
+.sysbell-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin: 15px 0 5px;
+}
+
+.sysbell-main-title span { color: #c5a059; }
+
+.sysbell-grid-layout {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 25px;
 }
 
-.visual-block, .text-block {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Títulos y Fuentes */
-.main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    color: #fff;
-    line-height: 1;
-}
-
-.main-title span {
-    color: #c5a059;
-}
-
-.tagline {
-    color: #c5a059;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-/* --- SOLUCIÓN DEFINITIVA AL QR --- */
-.qr-secure-container {
-    display: flex;
-    align-items: center;
-    background: rgba(197, 160, 89, 0.1);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 30px;
-    width: fit-content; /* Evita que crezca de más */
-}
-
-.qr-fixed-size {
-    width: 120px !important; /* BLOQUEO DE TAMAÑO */
-    height: 120px !important;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 2px solid #c5a059;
-}
-
-.qr-instructions {
-    padding-left: 20px;
-    color: #fff;
-}
-
-.qr-instructions strong {
-    display: block;
-    color: #c5a059;
-    font-size: 1.1rem;
-}
-
-/* --- ICONOS DE ABAJO --- */
-.features-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.feature-item {
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-.feature-item i {
-    color: #c5a059;
-    margin-right: 8px;
-}
-
-/* Video */
-.video-container-fixed video {
-    width: 100%;
-    border-radius: 15px;
+/* BLOQUEO DE VIDEO */
+.sysbell-video-box { flex: 1.5; min-width: 300px; }
+.fixed-video {
+    width: 100% !important;
+    max-height: 350px !important;
+    border-radius: 12px;
     border: 1px solid #333;
 }
+
+/* BLOQUEO DE QR GIGANTE */
+.sysbell-info-box { flex: 1; min-width: 250px; }
+
+.qr-small-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(197, 160, 89, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    width: fit-content;
+}
+
+.qr-mini {
+    width: 100px !important; /* Tamaño fijo, no cambiará */
+    height: 100px !important;
+    object-fit: contain;
+    border: 2px solid #c5a059;
+    border-radius: 8px;
+}
+
+.qr-labels strong { display: block; color: #c5a059; font-size: 0.9rem; }
+.qr-labels span { color: #fff; font-size: 0.8rem; }
+
+/* Características */
+.sysbell-features-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+}
+
+.feat { color: #fff; font-size: 0.85rem; }
+.feat i { color: #c5a059; margin-right: 5px; }
+
+
+
+
