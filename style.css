@@ -613,67 +613,32 @@ video {
     transform: translateY(-8px); /* Se eleva un poco más */
     filter: brightness(1.2);
     box-shadow: 0 0 30px currentColor;
-/* --- ESTILO PRECISIÓN SYSBELL --- */
 .sysbell-premium-card {
-    background: #0a111a !important;
+    max-width: 900px !important;
+    margin: 20px auto !important;
+    background: #0a0a0a !important;
     border: 1px solid #c5a059 !important;
-    padding: 30px !important;
-    border-radius: 20px;
-    margin-top: 50px;
+    padding: 25px !important;
+    border-radius: 15px !important;
 }
 
-.gold-badge {
-    background: #c5a059;
-    color: #000;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-radius: 4px;
-}
-
-.sysbell-main-title { font-size: 2.2rem; color: #fff; margin: 15px 0; }
-.sysbell-main-title span { color: #c5a059; }
-
-.sysbell-grid-layout {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-/* BLOQUEO DE TAMAÑOS GIGANTES */
 .fixed-video {
     width: 100% !important;
-    max-width: 450px !important;
-    border-radius: 12px;
-    border: 1px solid #333;
+    max-width: 400px !important;
+    border-radius: 10px !important;
 }
 
-.qr-small-fixed {
-    width: 90px !important; /* Tamaño pequeño real */
+.qr-mini-img {
+    width: 90px !important; /* ESTO LO DEJA PEQUEÑO */
     height: 90px !important;
-    border: 2px solid #c5a059;
-    border-radius: 8px;
-    background: #fff;
+    border: 2px solid #c5a059 !important;
+    background: white !important;
 }
 
-.qr-premium-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.social-links-premium { display: flex; gap: 20px; margin-top: 20px; }
-.social-icon { color: #c5a059; font-size: 1.5rem; transition: 0.3s; }
-.social-icon:hover { color: #fff; transform: translateY(-3px); }
-
-.sysbell-features-line {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+.qr-mini-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
 }
 
 
