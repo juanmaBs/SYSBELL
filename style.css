@@ -626,73 +626,61 @@ video {
     .ia-layout {
         grid-template-columns: 1fr;
     }
-/* Unificar el fondo para que no haya corte brusco */
-.sysbell-premium-section {
-    background: linear-gradient(to bottom, #050a14, #0a0a0a); /* Del azul oscuro al negro */
-    padding: 60px 0;
+/* Ajustes de Layout */
+.ia-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
-/* Títulos dentro de la caja */
-.premium-title {
-    color: #fff;
-    font-size: 2.2rem;
-    margin-top: 15px;
+.ia-visual, .ia-info {
+    flex: 1;
+    min-width: 300px;
 }
 
-.premium-title span {
-    color: #d4af37; /* Dorado */
-}
-
-.premium-subtitle {
-    color: #aaa;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-/* Mejorar la caja dorada */
-.dark-gold-theme {
-    border: 1px solid rgba(212, 175, 55, 0.4) !important;
-    background: #111 !important;
-    border-radius: 20px;
-    padding: 40px !important;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Asegurar que las imágenes rotas de arriba no distraigan */
-.gallery-item img {
-    min-height: 100px;
-    background: #112240; /* Color sólido mientras cargan las fotos del POS */
-    border-radius: 8px;
-}
-/* Estenedor del QR con estética Premium */
-.qr-demo-wrapper {
-    text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    background: rgba(212, 175, 55, 0.05);
-    border: 1px dashed #d4af37;
-    border-radius: 15px;
-}
-
+/* Arreglar el QR que se ve roto */
 .qr-final-img {
-    width: 160px; /* Tamaño optimizado para lectura rápida */
-    height: auto;
-    border-radius: 10px;
-    border: 3px solid #d4af37;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s ease;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    margin-bottom: 10px;
+    background-color: #fff; /* Fondo blanco por si la imagen falla */
 }
 
-.qr-final-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+/* Arreglar el Grid de iconos de abajo */
+.features-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.qr-label {
+.f-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.f-card i {
     color: #d4af37;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-top: 12px;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.f-card span {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Estilo de la Tarjeta */
+.dark-gold-theme {
+    padding: 40px !important;
+    border: 1px solid #d4af37 !important;
+    background: #0a0a0a !important;
 }
