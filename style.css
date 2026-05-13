@@ -641,46 +641,98 @@ video {
     min-width: 300px;
 }
 
-/* Arreglar el QR que se ve roto */
-.qr-final-img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border: 2px solid #d4af37;
-    margin-bottom: 10px;
-    background-color: #fff; /* Fondo blanco por si la imagen falla */
+/* Importar fuente elegante al inicio de tu CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+.premium-gold-card {
+    background: #0d0d0d !important;
+    border: 1px solid #c5a059 !important; /* Dorado champagne */
+    border-radius: 20px;
+    padding: 50px !important;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Arreglar el Grid de iconos de abajo */
-.features-grid-premium {
+.sysbell-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.sysbell-title span {
+    color: #c5a059;
+    font-style: italic;
+}
+
+.sysbell-tagline {
+    color: #c5a059;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.ia-flex-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ia-visual-side, .ia-text-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* --- SOLUCIÓN AL QR GIGANTE --- */
+.qr-premium-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(197, 160, 89, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    width: fit-content;
+    margin-top: 25px;
+}
+
+.qr-img-fixed {
+    width: 100px !important; /* Tamaño controlado para que no se desborde */
+    height: 100px !important;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.qr-text-info span {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.qr-text-info small {
+    color: #c5a059;
+}
+
+/* --- GRID DE ICONOS --- */
+.ia-features-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    gap: 20px;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
 }
 
-.f-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.f-card i {
-    color: #d4af37;
-    font-size: 1.5rem;
-}
-
-.f-card span {
-    font-size: 0.9rem;
+.feat-item {
+    text-align: center;
     color: #fff;
 }
 
-/* Estilo de la Tarjeta */
-.dark-gold-theme {
-    padding: 40px !important;
-    border: 1px solid #d4af37 !important;
-    background: #0a0a0a !important;
+.feat-item i {
+    display: block;
+    color: #c5a059;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
