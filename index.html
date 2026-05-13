@@ -151,12 +151,9 @@
         <div class="software-card dark-gold-theme">
             <div class="premium-badge">PROYECTO ESTRELLA</div>
             
-            <h2 class="premium-title">Sysbell: <span>Master Barber AI</span></h2>
-            <p class="premium-subtitle">Inteligencia Artificial aplicada al sector de la belleza premium.</p>
-
-            <div class="ia-layout">
-                <!-- Video de Demostración -->
-                <div class="video-container">
+            <div class="ia-main-content">
+                <!-- Lado Izquierdo: Video -->
+                <div class="ia-visual">
                     <div class="video-wrapper">
                         <video controls>
                             <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
@@ -165,38 +162,33 @@
                     </div>
                 </div>
 
-                <!-- Descripción y QR -->
-                <div class="ia-description">
+                <!-- Lado Derecho: Info y QR -->
+                <div class="ia-info">
+                    <h2 class="premium-title">Sysbell: <span>Master Barber AI</span></h2>
+                    <p class="premium-subtitle">Inteligencia Artificial aplicada al sector de la belleza premium.</p>
+                    
                     <div class="lang-box">
-                        <h3>Elevando la Barbería al Nivel Digital</h3>
                         <p>Optimización de ingresos mediante <strong>Llama 3.3 70B</strong>. Gestión de pagos, visagismo y fidelización automática.</p>
                     </div>
 
-                    <!-- El QR con el nombre exacto del archivo -->
                     <div class="qr-demo-wrapper">
-                        <img src="assets/QR.jpg" alt="Escanea para probar Sysbell" class="qr-final-img">
-                        <p class="qr-label"><i class="fas fa-qrcode"></i> PRUEBA LA DEMO EN VIVO</p>
-                    </div>
-
-                    <div class="tech-stack-premium">
-                        <span class="badge-gold">Python</span>
-                        <span class="badge-gold">Groq API</span>
-                        <span class="badge-gold">SQLite3</span>
+                        <!-- IMPORTANTE: Revisa que el nombre sea QR.jpg en minúsculas o mayúsculas exactas -->
+                        <img src="assets/QR.jpg" alt="QR Demo" class="qr-final-img">
+                        <p class="qr-label"><i class="fas fa-qrcode"></i> PRUEBA LA DEMO</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Resumen de funciones clave -->
+            <!-- Grid de funciones (Abajo del todo) -->
             <div class="features-grid-premium">
-                <div class="f-card"><i class="fas fa-cut"></i><p>Visagismo IA</p></div>
-                <div class="f-card"><i class="fas fa-wallet"></i><p>Pagos Nequi/Davi</p></div>
-                <div class="f-card"><i class="fas fa-chart-line"></i><p>Marketing Aut.</p></div>
-                <div class="f-card"><i class="fas fa-star"></i><p>Puntos Lealtad</p></div>
+                <div class="f-card"><i class="fas fa-cut"></i><span>Visagismo IA</span></div>
+                <div class="f-card"><i class="fas fa-wallet"></i><span>Pagos Nequi/Davi</span></div>
+                <div class="f-card"><i class="fas fa-chart-line"></i><span>Marketing Aut.</span></div>
+                <div class="f-card"><i class="fas fa-star"></i><span>Puntos Lealtad</span></div>
             </div>
         </div>
     </div>
 </section>
-
     <div id="imageModal" class="modal" onclick="this.style.display='none'">
         <span class="close">&times;</span>
         <img class="modal-content" id="imgFull">
