@@ -146,7 +146,7 @@
     </section>
 
 <!-- --- SECCIÓN PROYECTO ESTRELLA: SYSBELL --- -->
-<section id="ia-agents" class="projects">
+<section id="ia-agents" class="projects sysbell-wrapper">
     <div class="project-container">
         <div class="software-card sysbell-premium-card">
             <div class="card-header-premium">
@@ -158,18 +158,23 @@
             <div class="sysbell-grid-layout">
                 <!-- Video Controlado -->
                 <div class="sysbell-video-box">
-                    <video controls class="fixed-video">
-                        <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-frame">
+                        <video controls class="fixed-video">
+                            <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
 
                 <!-- Info y QR Pequeño -->
                 <div class="sysbell-info-box">
-                    <p class="premium-text">Optimización de ingresos, gestión de pagos y fidelización automática en una sola herramienta diseñada para el sector de lujo.</p>
+                    <p class="premium-text">
+                        Optimización de ingresos, gestión de pagos y fidelización automática en una sola herramienta diseñada para el sector de lujo.
+                    </p>
                     
-                    <div class="qr-small-container">
-                        <img src="assets/QR.jpg" alt="QR Demo" class="qr-mini">
-                        <div class="qr-labels">
+                    <!-- Contenedor del QR con tamaño controlado -->
+                    <div class="qr-premium-container">
+                        <img src="assets/QR.jpg" alt="QR Demo Sysbell" class="qr-small-fixed">
+                        <div class="qr-details">
                             <strong>DEMO EN VIVO</strong>
                             <span>Escanea para probar</span>
                         </div>
