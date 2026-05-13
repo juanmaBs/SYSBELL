@@ -627,3 +627,80 @@ video {
         grid-template-columns: 1fr;
     }
 }
+/* Estilo Dark Barber Premium */
+.sysbell-premium {
+    background: #0a0a0a; /* Negro más profundo */
+    padding-top: 80px;
+}
+
+.dark-gold-theme {
+    border: 1px solid #d4af37 !important; /* Borde Dorado */
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.premium-badge {
+    background: #d4af37;
+    color: #000;
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 0 auto 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.ia-description h3 {
+    color: #d4af37;
+    font-family: 'Playfair Display', serif; /* O una tipografía elegante que tengas */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.english-text {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 15px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.badge-gold {
+    background: rgba(212, 175, 55, 0.15);
+    color: #d4af37;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #d4af37;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.features-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.f-card {
+    text-align: center;
+}
+
+.f-card i {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.f-card h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.f-card p {
+    font-size: 0.85rem;
+    color: #bbb;
+}
