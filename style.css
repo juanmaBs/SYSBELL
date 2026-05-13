@@ -613,112 +613,52 @@ video {
     transform: translateY(-8px); /* Se eleva un poco más */
     filter: brightness(1.2);
     box-shadow: 0 0 30px currentColor;
-/* --- ESTILO PREMIUM SYSBELL --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
-
-.sysbell-wrapper {
-    background: #050505;
-    padding: 60px 0;
-    font-family: 'Poppins', sans-serif;
-}
-
+/* Bloqueo de dimensiones para evitar el error de las capturas */
 .sysbell-premium-card {
+    max-width: 900px;
+    margin: 0 auto;
     background: #0a0a0a !important;
-    border: 1px solid #c5a059 !important; /* Dorado champagne */
-    padding: 40px !important;
-    border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+    border: 1px solid #c5a059 !important;
 }
 
-.gold-badge {
-    background: #c5a059;
-    color: #000;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 50px;
-    letter-spacing: 2px;
-}
-
-.sysbell-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin: 20px 0 5px;
-}
-
-.sysbell-main-title span { 
-    color: #c5a059; 
-    font-style: italic; 
-}
-
-.sysbell-subtitle {
-    color: #c5a059;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.sysbell-grid-layout {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-/* Control del Video */
-.sysbell-video-box { flex: 1.2; min-width: 300px; }
 .fixed-video {
     width: 100% !important;
-    max-height: 380px !important;
-    border-radius: 15px;
-    border: 1px solid #333;
+    max-width: 450px !important; /* Evita que el video sea gigante */
+    border-radius: 10px;
 }
 
-/* --- CONTROL ESTRICTO DEL QR PEQUEÑO --- */
-.sysbell-info-box { flex: 1; min-width: 250px; }
-
-.qr-premium-container {
+.qr-mini-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px;
-    background: rgba(197, 160, 89, 0.1);
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    width: fit-content;
-    margin-top: 25px;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.qr-small-fixed {
-    width: 100px !important; /* TAMAÑO PEQUEÑO BLOQUEADO */
-    height: 100px !important;
-    object-fit: contain;
-    border-radius: 8px;
+.qr-mini-img {
+    width: 80px !important; /* Tamaño pequeño real */
+    height: 80px !important;
     border: 2px solid #c5a059;
-    background: #fff;
+    border-radius: 5px;
+    background: white;
 }
 
-.qr-details strong { 
-    display: block; 
-    color: #c5a059; 
-    font-size: 0.9rem; 
-    letter-spacing: 1px;
-}
-
-.qr-details span { color: #fff; font-size: 0.75rem; opacity: 0.8; }
-
-/* Línea de Características */
-.sysbell-features-line {
+/* Estilo de Redes Sociales */
+.social-links-premium {
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.feat { color: #fff; font-size: 0.9rem; font-weight: 300; }
-.feat i { color: #c5a059; margin-right: 8px; }
+.social-icon {
+    color: #c5a059;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
 
 
