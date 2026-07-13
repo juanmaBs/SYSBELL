@@ -1,7 +1,145 @@
-<nav class="navbar">
-    <a href="index.html" class="nav-logo">Sysbell</a>
-    <div class="nav-links">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="proyectos.html">Proyectos</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Sysbell Software</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+        <div class="logo">SYS<span>BELL</span></div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html" class="active">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="projects-container-view">
+        <h1 class="main-projects-title">Mis <span>Desarrollos & Sistemas</span></h1>
+        <p class="main-projects-subtitle">Soluciones a medida para la optimización y modernización de negocios.</p>
+
+        <div class="projects-clean-grid">
+
+            <div class="software-card">
+                <div class="video-container">
+                    <h4>🎬 Sistema de Cotización Automatizado</h4>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
+                    <p class="video-caption">Cálculo de presupuestos automáticos, márgenes de ganancia y reportes rápidos.</p>
+                </div>
+                <div class="card-header">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Control Financiero Eficiente</h3>
+                </div>
+                <p>Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos o servicios al instante y guardando el histórico de clientes.</p>
+                <div class="tech-stack">
+                    <div class="badges">
+                        <span class="badge">Automatización</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">Finanzas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="software-card">
+                <div class="video-container">
+                    <h4>🎬 Mira a Sysbell en Acción</h4>
+                    <div class="video-wrapper">
+                        <video controls poster="assets/miniatura.jpg">
+                            <source src="assets/demo-barberia.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
+                    <p class="video-caption">Demostración de la interfaz y gestión de citas en tiempo real.</p>
+                </div>
+                <div class="card-header">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Sysbell_Barberia</h3>
+                </div>
+                <p>Sistema de gestión integral pensado en la eficiencia y el orden para barberías profesionales.</p>
+                <div class="tech-stack">
+                    <div class="badges">
+                        <span class="badge">Desktop App</span>
+                        <span class="badge">Data Management</span>
+                        <span class="badge">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="software-card">
+                <div class="card-header">
+                    <i class="fas fa-store"></i>
+                    <h3>Sysbell_Store (POS)</h3>
+                </div>
+                <p>Control total: Ventas, Inventarios y Facturación automatizada con reportes en Excel.</p>
+                
+                <div class="gallery-grid" style="margin-top: 15px; margin-bottom: 15px;">
+                    <div class="gallery-item"><img src="assets/1.PNG" alt="Captura 1" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/2.PNG" alt="Captura 2" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/3.PNG" alt="Captura 3" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/4.PNG" alt="Captura 4" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/5.PNG" alt="Captura 5" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/6.PNG" alt="Captura 6" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/7.PNG" alt="Captura 7" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/8.PNG" alt="Captura 8" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/9.PNG" alt="Captura 9" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/10.PNG" alt="Captura 10" onclick="zoomImage(this)"></div>
+                    <div class="gallery-item"><img src="assets/11.PNG" alt="Captura 11" onclick="zoomImage(this)"></div>
+                </div>
+                <div class="tech-stack">
+                    <div class="badges">
+                        <span class="badge">Ventas & POS</span>
+                        <span class="badge">Excel Reports</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="software-card sysbell-premium-card central-compact" style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="card-header-premium">
+                <span class="gold-badge">PROYECTO ESTRELLA</span>
+                <h2 class="sysbell-title-glow">Sysbell <span>Master Barber</span></h2>
+                <div class="title-separator-gold"></div>
+                <p class="ia-subtitle">IA Premium: Llama 3.3 70B & Automatización</p>
+            </div>
+            <div class="video-wrapper-small">
+                <div class="video-glow-frame">
+                    <video controls class="fixed-video-small">
+                        <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="sysbell-footer-compact">
+                <div class="qr-box-highlight">
+                    <div class="qr-animated-border-premium">
+                        <span></span>
+                        <img src="assets/QR.jpg" alt="QR" class="qr-img-large">
+                    </div>
+                    <div class="qr-label">
+                        <strong class="gold-text">DEMO INTERACTIVA</strong>
+                        <span>Escanea para probar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgFull">
     </div>
-</nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
