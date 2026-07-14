@@ -20,141 +20,128 @@
         </ul>
     </nav>
 
-    <main class="projects-container-view">
-        <h1 class="main-projects-title">Mis <span>Desarrollos & Sistemas</span></h1>
-        <p class="main-projects-subtitle">Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
+    <main class="projects-modern-view">
+        <header class="projects-hero-header">
+            <h1 class="main-projects-title">Mis <span>Desarrollos & Sistemas</span></h1>
+            <p class="main-projects-subtitle">Soluciones profesionales e innovadoras diseñadas a medida para optimizar tu negocio.</p>
+        </header>
 
-        <div class="projects-clean-grid">
+        <section class="projects-rows-container">
 
-            <div class="software-card">
-                <div class="card-media">
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
-                            Tu navegador no soporta videos.
-                        </video>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-header">
-                        <i class="fas fa-calculator"></i>
-                        <h3>Sistema de Cotización</h3>
-                    </div>
-                    <p class="card-description">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos al instante y calculando márgenes de ganancia.</p>
-                </div>
-                <div class="card-footer">
-                    <div class="tech-stack">
-                        <div class="badges">
-                            <span class="badge">Automatización</span>
-                            <span class="badge">Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="software-card">
-                <div class="card-media">
-                    <div class="video-wrapper">
-                        <video controls poster="assets/1.PNG">
-                            <source src="assets/demo-barberia.mp4" type="video/mp4">
-                            Tu navegador no soporta videos.
-                        </video>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-header">
-                        <i class="fas fa-cut"></i>
-                        <h3>Sysbell_Barberia</h3>
-                    </div>
-                    <p class="card-description">Sistema desktop de gestión de base de datos para barberías. Optimiza el control de clientes, citas y administración interna.</p>
-                </div>
-                <div class="card-footer">
-                    <div class="tech-stack">
-                        <div class="badges">
-                            <span class="badge">Desktop App</span>
-                            <span class="badge">SQLite</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="software-card">
-                <div class="card-media-gallery">
-                    <div class="main-image-container">
-                        <img id="mainDisplay" src="assets/1.PNG" alt="Vista POS">
-                    </div>
-                    <div class="thumbnails-slider">
-                        <img src="assets/1.PNG" class="thumb active" onclick="changeImage(this)">
-                        <img src="assets/2.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/3.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/4.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/5.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/6.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/7.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/8.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/9.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/10.PNG" class="thumb" onclick="changeImage(this)">
-                        <img src="assets/11.PNG" class="thumb" onclick="changeImage(this)">
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-header">
-                        <i class="fas fa-store"></i>
-                        <h3>Sysbell_Store (POS)</h3>
-                    </div>
-                    <p class="card-description">Solución robusta para comercio minorista que automatiza ventas, inventarios, facturación y reportes en Excel.</p>
-                </div>
-                <div class="card-footer">
-                    <div class="tech-stack">
-                        <div class="badges">
-                            <span class="badge">Ventas & POS</span>
-                            <span class="badge">Excel Reports</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="software-card premium-project-card">
-                <div class="card-media chatbot-media">
-                    <div class="video-wrapper vertical-video">
+            <div class="project-row premium-row">
+                <div class="project-media-col">
+                    <div class="vertical-video-frame">
                         <video controls poster="assets/1.PNG">
                             <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
                             Tu navegador no soporta videos.
                         </video>
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="card-header gold-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>Sysbell Master Barber</h3>
-                    </div>
-                    <p class="card-description">Agente inteligente de reservas impulsado por IA (Llama 3.3). Atiende y agenda citas automáticamente vía Telegram 24/7.</p>
-                </div>
-                <div class="card-footer gold-footer">
-                    <div class="tech-stack">
-                        <div class="badges">
-                            <span class="badge gold-badge">Llama 3.3</span>
-                            <span class="badge gold-badge">Telegram Bot</span>
-                        </div>
+                <div class="project-info-col">
+                    <div class="project-badge gold-badge"><i class="fas fa-star"></i> Proyecto Estrella</div>
+                    <h2 class="project-title gold-text">Sysbell Master Barber</h2>
+                    <p class="project-tagline">Agente conversacional inteligente impulsado por IA para la automatización de citas.</p>
+                    <p class="project-description">
+                        Un sistema automatizado de reservas e interacción con clientes de última generación que se integra directamente con Telegram. Diseñado específicamente para barberías, gestiona de forma autónoma el flujo completo de agendamiento, confirmación y consulta de servicios en tiempo real utilizando modelos avanzados Llama 3.3.
+                    </p>
+                    <div class="project-tech-pills">
+                        <span><i class="fab fa-telegram"></i> Telegram Bot</span>
+                        <span><i class="fas fa-brain"></i> Llama 3.3 AI</span>
+                        <span><i class="fab fa-python"></i> Python Integration</span>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div class="project-row reverse-row">
+                <div class="project-media-col">
+                    <div class="pos-gallery-wrapper">
+                        <div class="gallery-header-bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="gallery-title">Sysbell_Store_POS_Capturas</span>
+                            <span class="swipe-hint"><i class="fas fa-hand-pointer"></i> Desliza para ver más</span>
+                        </div>
+                        <div class="pos-images-slider">
+                            <img src="assets/1.PNG" alt="Dashboard Estadístico">
+                            <img src="assets/2.PNG" alt="Gestión de Productos">
+                            <img src="assets/3.PNG" alt="Gestión de Inventarios">
+                            <img src="assets/4.PNG" alt="Modulo de Facturación">
+                            <img src="assets/5.PNG" alt="Reporte Excel 1">
+                            <img src="assets/6.PNG" alt="Interfaz POS principal">
+                            <img src="assets/7.PNG" alt="Control de Ventas">
+                            <img src="assets/8.PNG" alt="Modulo de Administración">
+                            <img src="assets/9.PNG" alt="Configuración de Sistema">
+                            <img src="assets/10.PNG" alt="Seguridad y Roles">
+                            <img src="assets/11.PNG" alt="Cierre de Caja">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info-col">
+                    <div class="project-badge"><i class="fas fa-store"></i> Ventas & POS</div>
+                    <h2 class="project-title">Sysbell_Store (POS)</h2>
+                    <p class="project-tagline">Software integral de facturación, inventario y control financiero comercial.</p>
+                    <p class="project-description">
+                        Una solución robusta para el comercio minorista que automatiza por completo la emisión de facturas legales, el control estricto de existencias en tiempo real y la generación de reportes avanzados exportables a Excel. Desarrollado con una interfaz enfocada en la facilidad de uso del cajero.
+                    </p>
+                    <div class="project-tech-pills">
+                        <span><i class="fas fa-file-excel"></i> Excel Reports</span>
+                        <span><i class="fas fa-database"></i> SQL Database</span>
+                        <span><i class="fas fa-desktop"></i> UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <div class="project-media-col">
+                    <div class="horizontal-video-frame">
+                        <video controls poster="assets/1.PNG">
+                            <source src="assets/demo-barberia.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
+                </div>
+                <div class="project-info-col">
+                    <div class="project-badge"><i class="fas fa-cut"></i> Desktop App</div>
+                    <h2 class="project-title">Sysbell Barbería</h2>
+                    <p class="project-tagline">Sistema de escritorio profesional para la administración de salones de belleza y barberías.</p>
+                    <p class="project-description">
+                        Software de escritorio construido para agilizar el flujo de trabajo diario de los negocios de estilismo. Permite un registro organizado de clientes habituales, control de agendas de los barberos activos, cobro rápido y un historial detallado de transacciones locales usando una base de datos segura.
+                    </p>
+                    <div class="project-tech-pills">
+                        <span><i class="fas fa-window-maximize"></i> Desktop App</span>
+                        <span><i class="fas fa-database"></i> SQLite</span>
+                        <span><i class="fas fa-users"></i> Gestión de Citas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-row reverse-row">
+                <div class="project-media-col">
+                    <div class="horizontal-video-frame">
+                        <video controls>
+                            <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
+                </div>
+                <div class="project-info-col">
+                    <div class="project-badge"><i class="fas fa-calculator"></i> Calculadora Financiera</div>
+                    <h2 class="project-title">Sistema de Cotización</h2>
+                    <p class="project-tagline">Herramienta automatizada de presupuestos rápidos y cálculo preciso de márgenes de ganancia.</p>
+                    <p class="project-description">
+                        Aplicación diseñada para agilizar significativamente el proceso comercial de ventas. Permite registrar insumos o productos al instante, estructurar cotizaciones profesionales personalizadas para clientes finales y visualizar de manera inmediata el margen de beneficio neto antes de concretar la oferta.
+                    </p>
+                    <div class="project-tech-pills">
+                        <span><i class="fab fa-python"></i> Python Backend</span>
+                        <span><i class="fas fa-sliders-h"></i> Control de Márgenes</span>
+                        <span><i class="fas fa-bolt"></i> Cotización Veloz</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 
-    <script>
-        function changeImage(element) {
-            // Cambiar imagen principal
-            document.getElementById('mainDisplay').src = element.src;
-            
-            // Quitar clase activa de todas las miniaturas
-            const thumbs = document.querySelectorAll('.thumb');
-            thumbs.forEach(t => t.classList.remove('active'));
-            
-            // Añadir clase activa a la seleccionada
-            element.classList.add('active');
-        }
-    </script>
 </body>
 </html>
