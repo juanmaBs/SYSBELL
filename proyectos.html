@@ -1,61 +1,104 @@
-<main class="projects-container">
-    <header class="projects-header">
-        <h1>Mis <span>Desarrollos & Sistemas</span></h1>
-        <p>Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
-    </header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Sysbell Software</title>
+    <!-- Verifica si tu archivo está en la raíz o pon la ruta correcta aquí -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-    <div class="modern-grid">
-        
-        <!-- Tarjeta 1: Cotizador -->
-        <div class="project-card">
-            <div class="card-media">
-                <video controls>
-                    <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="card-content">
-                <span class="card-badge"><i class="fas fa-calculator"></i> Automatización</span>
-                <h3>Sistema de Cotización</h3>
-                <p>Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos al instante y calculando márgenes de ganancia.</p>
-                <div class="card-tags">
-                    <span>Python</span>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+        <div class="logo">SYS<span>BELL</span></div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html" class="active">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="seccion-proyectos">
+        <header class="proyectos-titulo-zona">
+            <h1>Mis <span>Desarrollos & Sistemas</span></h1>
+            <p>Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
+        </header>
+
+        <!-- CONTENEDOR FLEXIBLE EN COLUMNA (No se deforma ni se rompe) -->
+        <div class="lista-proyectos-vertical">
+
+            <!-- 1. CHATBOT AGENTE IA -->
+            <div class="tarjeta-proyecto-horizontal">
+                <div class="multimedia-proyecto vertical-video">
+                    <video controls poster="assets/1.PNG">
+                        <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="info-proyecto">
+                    <span class="categoria-tag">Automatización / IA</span>
+                    <h2>Sysbell Master Barber</h2>
+                    <p>Agente conversacional inteligente impulsado por IA para la automatización de citas y reservas en tiempo real.</p>
+                    <div class="tecnologias">
+                        <span>Python</span>
+                        <span>Telegram Bot</span>
+                        <span>Llama API</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tarjeta 2: Barbería -->
-        <div class="project-card">
-            <div class="card-media">
-                <video controls poster="assets/1.PNG">
-                    <source src="assets/demo-barberia.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="card-content">
-                <span class="card-badge"><i class="fas fa-desktop"></i> Desktop App</span>
-                <h3>Sysbell_Barberia</h3>
-                <p>Sistema desktop de gestión de base de datos para barberías. Optimiza el control de clientes, citas y administración interna.</p>
-                <div class="card-tags">
-                    <span>SQLite</span>
+            <!-- 2. SYSBELL STORE POS -->
+            <div class="tarjeta-proyecto-horizontal">
+                <div class="multimedia-proyecto slider-pos-contenedor">
+                    <div class="slider-pos-scroll">
+                        <img src="assets/1.PNG" alt="Captura 1">
+                        <img src="assets/2.PNG" alt="Captura 2">
+                        <img src="assets/3.PNG" alt="Captura 3">
+                        <img src="assets/4.PNG" alt="Captura 4">
+                        <img src="assets/5.PNG" alt="Captura 5">
+                        <img src="assets/6.PNG" alt="Captura 6">
+                        <img src="assets/7.PNG" alt="Captura 7">
+                        <img src="assets/8.PNG" alt="Captura 8">
+                        <img src="assets/9.PNG" alt="Captura 9">
+                        <img src="assets/10.PNG" alt="Captura 10">
+                        <img src="assets/11.PNG" alt="Captura 11">
+                    </div>
+                    <div class="slider-aviso"><i class="fas fa-arrows-alt-h"></i> Desliza para ver las 11 capturas</div>
+                </div>
+                <div class="info-proyecto">
+                    <span class="categoria-tag">Ventas & Gestión comercial</span>
+                    <h2>Sysbell_Store (POS)</h2>
+                    <p>Software integral de facturación, control de inventarios rígido y reportes avanzados exportables a Excel.</p>
+                    <div class="tecnologias">
+                        <span>Desktop</span>
+                        <span>Excel Reports</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tarjeta 3: POS Sysbell Store -->
-        <div class="project-card featured-card">
-            <div class="card-media">
-                <!-- Mostramos una captura limpia que no se corte -->
-                <img src="assets/1.PNG" alt="Sysbell Store POS">
-            </div>
-            <div class="card-content">
-                <span class="card-badge gold"><i class="fas fa-star"></i> Sistema POS</span>
-                <h3>Sysbell_Store (POS)</h3>
-                <p>Software completo de facturación, control de inventario y caja. Diseñado para un rendimiento rápido en entornos comerciales.</p>
-                <div class="card-tags">
-                    <span>Python</span>
-                    <span>Excel SQL</span>
+            <!-- 3. SISTEMA DE COTIZACIÓN -->
+            <div class="tarjeta-proyecto-horizontal">
+                <div class="multimedia-proyecto horizontal-video">
+                    <video controls>
+                        <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="info-proyecto">
+                    <span class="categoria-tag">Utilidad Financiera</span>
+                    <h2>Sistema de Cotización</h2>
+                    <p>Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos al instante y calculando márgenes de ganancia netos.</p>
+                    <div class="tecnologias">
+                        <span>Python</span>
+                        <span>Herramienta Comercial</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-</main>
+        </div>
+    </main>
+
+</body>
+</html>
