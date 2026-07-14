@@ -40,7 +40,7 @@
                         <i class="fas fa-calculator"></i>
                         <h3>Sistema de Cotización</h3>
                     </div>
-                    <p class="card-description">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos o servicios al instante y calculando márgenes de ganancia de forma precisa.</p>
+                    <p class="card-description">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos al instante y calculando márgenes de ganancia.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
@@ -66,7 +66,7 @@
                         <i class="fas fa-cut"></i>
                         <h3>Sysbell_Barberia</h3>
                     </div>
-                    <p class="card-description">Sistema desktop de gestión de base de datos para barberías. Diseñado para optimizar el control de clientes, citas y administración general de forma limpia.</p>
+                    <p class="card-description">Sistema desktop de gestión de base de datos para barberías. Optimiza el control de clientes, citas y administración interna.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
@@ -79,18 +79,22 @@
             </div>
 
             <div class="software-card">
-                <div class="card-media">
-                    <div class="slider-container">
-                        <div class="slider-wrapper" id="posSlider">
-                            <img src="assets/1.PNG" class="slide-img active" alt="Captura 1">
-                            <img src="assets/2.PNG" class="slide-img" alt="Captura 2">
-                            <img src="assets/3.PNG" class="slide-img" alt="Captura 3">
-                            <img src="assets/4.PNG" class="slide-img" alt="Captura 4">
-                            <img src="assets/5.PNG" class="slide-img" alt="Captura 5">
-                            <img src="assets/6.PNG" class="slide-img" alt="Captura 6">
-                        </div>
-                        <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                <div class="card-media-gallery">
+                    <div class="main-image-container">
+                        <img id="mainDisplay" src="assets/1.PNG" alt="Vista POS">
+                    </div>
+                    <div class="thumbnails-slider">
+                        <img src="assets/1.PNG" class="thumb active" onclick="changeImage(this)">
+                        <img src="assets/2.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/3.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/4.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/5.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/6.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/7.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/8.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/9.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/10.PNG" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/11.PNG" class="thumb" onclick="changeImage(this)">
                     </div>
                 </div>
                 <div class="card-body">
@@ -98,7 +102,7 @@
                         <i class="fas fa-store"></i>
                         <h3>Sysbell_Store (POS)</h3>
                     </div>
-                    <p class="card-description">Solución robusta para comercio minorista que automatiza ventas, control de inventarios, generación de facturas y reportes detallados en Excel.</p>
+                    <p class="card-description">Solución robusta para comercio minorista que automatiza ventas, inventarios, facturación y reportes en Excel.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
@@ -111,9 +115,9 @@
             </div>
 
             <div class="software-card premium-project-card">
-                <div class="card-media">
-                    <div class="video-wrapper">
-                        <video controls poster="assets/QR.jpg">
+                <div class="card-media chatbot-media">
+                    <div class="video-wrapper vertical-video">
+                        <video controls poster="assets/1.PNG">
                             <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
                             Tu navegador no soporta videos.
                         </video>
@@ -124,14 +128,13 @@
                         <i class="fas fa-robot"></i>
                         <h3>Sysbell Master Barber</h3>
                     </div>
-                    <p class="card-description">Agente conversacional inteligente impulsado por IA (Llama 3.3). Automatiza reservas y atiende a tus clientes vía Telegram 24/7 de forma premium.</p>
+                    <p class="card-description">Agente inteligente de reservas impulsado por IA (Llama 3.3). Atiende y agenda citas automáticamente vía Telegram 24/7.</p>
                 </div>
                 <div class="card-footer gold-footer">
-                    <div class="qr-compact-inline">
-                        <img src="assets/QR.jpg" alt="QR" class="qr-thumb">
-                        <div class="qr-text">
-                            <strong>DEMO ACTIVA</strong>
-                            <span>Escanea para probar</span>
+                    <div class="tech-stack">
+                        <div class="badges">
+                            <span class="badge gold-badge">Llama 3.3</span>
+                            <span class="badge gold-badge">Telegram Bot</span>
                         </div>
                     </div>
                 </div>
@@ -141,23 +144,17 @@
     </main>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide-img');
-        
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
+        function changeImage(element) {
+            // Cambiar imagen principal
+            document.getElementById('mainDisplay').src = element.src;
+            
+            // Quitar clase activa de todas las miniaturas
+            const thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach(t => t.classList.remove('active'));
+            
+            // Añadir clase activa a la seleccionada
+            element.classList.add('active');
         }
-
-        function moveSlide(step) {
-            showSlide(currentSlide + step);
-        }
-
-        // Cambio automático cada 4 segundos
-        setInterval(() => {
-            moveSlide(1);
-        }, 4000);
     </script>
 </body>
 </html>
