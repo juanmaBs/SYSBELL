@@ -1481,3 +1481,202 @@ video {
     gap: 30px;
     text-align: left;
 }
+/* ==========================================================================
+   NUEVA GRID DE PROYECTOS PROFESIONAL (SYSBELL)
+   ========================================================================== */
+
+.projects-container-view {
+    max-width: 1200px;
+    margin: 100px auto 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-projects-title {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.main-projects-title span {
+    color: #00f2fe;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.main-projects-subtitle {
+    text-align: center;
+    color: #a0aec0;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Grid principal */
+.projects-clean-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Estructura unificada de tarjeta */
+.projects-clean-grid .software-card {
+    background: #0b132b;
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea los elementos arriba, centro y abajo uniformemente */
+    height: 580px; /* Altura fija para que todas las tarjetas se vean idénticas */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.projects-clean-grid .software-card:hover {
+    transform: translateY(-8px);
+    border-color: #00f2fe;
+    box-shadow: 0 15px 35px rgba(0, 242, 254, 0.15);
+}
+
+/* Contenedor Multimedia (Videos y fotos con proporción idéntica) */
+.card-media {
+    width: 100%;
+    height: 220px; /* Altura uniforme para el área multimedia */
+    background: #020c1b;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para llenar el espacio sin deformarse */
+}
+
+/* Deslizador horizontal moderno para las imágenes del POS */
+.gallery-scroll-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-scroll-wrapper {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto; /* Permite scroll lateral */
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+/* Ocultar barra de scroll por defecto en navegadores */
+.gallery-scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.gallery-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 254, 0.4);
+    border-radius: 10px;
+}
+
+.gallery-scroll-wrapper img {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.gallery-scroll-wrapper img:hover {
+    transform: scale(1.04);
+    border-color: #00f2fe;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: #00f2fe;
+    opacity: 0.8;
+    animation: pulseIndicator 2s infinite;
+    pointer-events: none;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 20px 25px;
+    flex-grow: 1; /* Hace que el texto use el espacio intermedio */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.card-header i {
+    font-size: 1.4rem;
+    color: #00f2fe;
+}
+
+.card-header h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: 0.92rem;
+    color: #a0aec0;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Parte baja con las tecnologías */
+.card-footer {
+    padding: 15px 25px 25px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-stack .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-stack .badge {
+    background: rgba(0, 242, 254, 0.08);
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Centrado para la sección premium de abajo */
+.premium-section-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+@keyframes pulseIndicator {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
