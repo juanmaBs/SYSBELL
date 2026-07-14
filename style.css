@@ -1758,168 +1758,134 @@ video {
     gap: 6px;
 }
 
-/* ==========================================
-   ESTILOS CORREGIDOS SECCIÓN PROYECTOS
-   ========================================== */
+/* ==========================================================================
+   RESCATE DE TARJETAS CUADRADAS ORIGINALES (SYSBELL)
+   ========================================================================== */
 
-.seccion-proyectos {
-    max-width: 1100px;
-    margin: 100px auto 60px auto;
-    padding: 0 20px;
-    font-family: sans-serif;
+.contenedor-proyectos-grid {
+    max-width: 1200px;
+    margin: 110px auto 60px auto;
+    padding: 0 24px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-.proyectos-titulo-zona {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.proyectos-titulo-zona h1 {
+.titulo-principal-proyectos {
     font-size: 2.2rem;
+    text-align: center;
     color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
-.proyectos-titulo-zona h1 span {
+.titulo-principal-proyectos span {
     color: #00f2fe;
 }
 
-.proyectos-titulo-zona p {
+.subtitulo-principal-proyectos {
+    text-align: center;
     color: #a0aec0;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 45px;
 }
 
-/* Contenedor en fila hacia abajo */
-.lista-proyectos-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+/* El Grid que genera los cuadrados perfectos uno al lado del otro */
+.grid-cuadrados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-/* Tarjeta limpia */
-.tarjeta-proyecto-horizontal {
-    display: flex;
-    background: #0b111e;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* Estructura de la tarjeta cuadrada */
+.tarjeta-cuadrada {
+    background: #060d1f;
+    border: 1px solid rgba(0, 242, 254, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    padding: 20px;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-cuadrada:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 242, 254, 0.3);
+}
+
+/* Contenedor multimedia superior uniforme */
+.zona-multimedia {
+    width: 100%;
+    height: 180px; /* Altura fija para que todos los cuadrados queden simétricos */
+    background: #020714;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-/* Control estricto de multimedia para que NO se deforme */
-.multimedia-proyecto {
-    flex: 1;
-    max-width: 450px;
+/* Solución para videos normales e imágenes */
+.video-horizontal video, .imagen-contenedor img {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 100%;
+    object-fit: cover; /* Llena el recuadro perfectamente */
 }
 
-/* Video Horizontal 16:9 estándar */
-.horizontal-video video {
+/* ¡LA SOLUCIÓN PARA EL VIDEO 9:16! */
+.video-vertical-ajustado video {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    background: #000;
+    height: 100%;
+    object-fit: contain !important; /* Mantiene la proporción nativa del celular sin estirarse */
+    background: #000000; /* Agrega fondo negro estético a los lados sobrantes */
 }
 
-/* Video Vertical para el Bot de Telegram */
-.vertical-video video {
-    width: 220px; /* Tamaño controlado de celular */
-    aspect-ratio: 9 / 16;
-    border-radius: 12px;
-    background: #000;
-}
-
-/* CONTROL DE CONTROL DE CAPTURAS DEL POS (Deslizador suave) */
-.slider-pos-contenedor {
+/* Contenido de la tarjeta */
+.cuerpo-tarjeta {
+    padding: 20px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background: #050811;
-    padding: 10px;
-    border-radius: 8px;
 }
 
-.slider-pos-scroll {
+.encabezado-tarjeta {
     display: flex;
+    align-items: center;
     gap: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 8px;
+    margin-bottom: 12px;
 }
 
-.slider-pos-scroll::-webkit-scrollbar {
-    height: 5px;
-}
-
-.slider-pos-scroll::-webkit-scrollbar-thumb {
-    background: #00f2fe;
-    border-radius: 4px;
-}
-
-.slider-pos-scroll img {
-    height: 180px;
-    width: auto;
-    border-radius: 6px;
-    flex-shrink: 0;
-}
-
-.slider-aviso {
-    font-size: 0.75rem;
+.encabezado-tarjeta i {
     color: #00f2fe;
-    margin-top: 6px;
-    text-align: center;
+    font-size: 1.2rem;
 }
 
-/* Texto Informativo */
-.info-proyecto {
-    flex: 1;
-}
-
-.categoria-tag {
-    font-size: 0.75rem;
-    color: #00f2fe;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.info-proyecto h2 {
-    font-size: 1.6rem;
+.encabezado-tarjeta h3 {
     color: #ffffff;
-    margin: 8px 0;
+    font-size: 1.15rem;
+    margin: 0;
+    font-weight: 600;
 }
 
-.info-proyecto p {
-    color: #cbd5e0;
-    font-size: 0.9rem;
+.descripcion-tarjeta {
+    color: #a0aec0;
+    font-size: 0.88rem;
     line-height: 1.5;
+    margin: 0;
 }
 
-.tecnologias {
+/* Parte baja con las tecnologías */
+.pie-tarjeta {
+    padding: 0 20px 20px 20px;
     display: flex;
-    gap: 8px;
-    margin-top: 15px;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
-.tecnologias span {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+.pildora-tech {
+    background: rgba(0, 242, 254, 0.05);
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.15);
     padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-}
-
-/* Responsivo para celulares */
-@media (max-width: 768px) {
-    .tarjeta-proyecto-horizontal {
-        flex-direction: column;
-        padding: 15px;
-    }
-    .multimedia-proyecto {
-        max-width: 100%;
-    }
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
 }
