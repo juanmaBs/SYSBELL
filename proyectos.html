@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | Sysbell Software</title>
-    <!-- Verifica si tu archivo está en la raíz o pon la ruta correcta aquí -->
-    <link rel="stylesheet" href="style.css"> 
+    <!-- Asegúrate de que style.css esté exactamente en la misma carpeta que este archivo -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -21,79 +21,93 @@
         </ul>
     </nav>
 
-    <main class="seccion-proyectos">
-        <header class="proyectos-titulo-zona">
-            <h1>Mis <span>Desarrollos & Sistemas</span></h1>
-            <p>Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
-        </header>
+    <main class="contenedor-proyectos-grid">
+        <h1 class="titulo-principal-proyectos">Mis <span>Desarrollos & Sistemas</span></h1>
+        <p class="subtitulo-principal-proyectos">Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
 
-        <!-- CONTENEDOR FLEXIBLE EN COLUMNA (No se deforma ni se rompe) -->
-        <div class="lista-proyectos-vertical">
+        <!-- VOLVEMOS AL SISTEMA DE CUADRADOS (GRID) -->
+        <div class="grid-cuadrados">
 
-            <!-- 1. CHATBOT AGENTE IA -->
-            <div class="tarjeta-proyecto-horizontal">
-                <div class="multimedia-proyecto vertical-video">
-                    <video controls poster="assets/1.PNG">
-                        <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="info-proyecto">
-                    <span class="categoria-tag">Automatización / IA</span>
-                    <h2>Sysbell Master Barber</h2>
-                    <p>Agente conversacional inteligente impulsado por IA para la automatización de citas y reservas en tiempo real.</p>
-                    <div class="tecnologias">
-                        <span>Python</span>
-                        <span>Telegram Bot</span>
-                        <span>Llama API</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. SYSBELL STORE POS -->
-            <div class="tarjeta-proyecto-horizontal">
-                <div class="multimedia-proyecto slider-pos-contenedor">
-                    <div class="slider-pos-scroll">
-                        <img src="assets/1.PNG" alt="Captura 1">
-                        <img src="assets/2.PNG" alt="Captura 2">
-                        <img src="assets/3.PNG" alt="Captura 3">
-                        <img src="assets/4.PNG" alt="Captura 4">
-                        <img src="assets/5.PNG" alt="Captura 5">
-                        <img src="assets/6.PNG" alt="Captura 6">
-                        <img src="assets/7.PNG" alt="Captura 7">
-                        <img src="assets/8.PNG" alt="Captura 8">
-                        <img src="assets/9.PNG" alt="Captura 9">
-                        <img src="assets/10.PNG" alt="Captura 10">
-                        <img src="assets/11.PNG" alt="Captura 11">
-                    </div>
-                    <div class="slider-aviso"><i class="fas fa-arrows-alt-h"></i> Desliza para ver las 11 capturas</div>
-                </div>
-                <div class="info-proyecto">
-                    <span class="categoria-tag">Ventas & Gestión comercial</span>
-                    <h2>Sysbell_Store (POS)</h2>
-                    <p>Software integral de facturación, control de inventarios rígido y reportes avanzados exportables a Excel.</p>
-                    <div class="tecnologias">
-                        <span>Desktop</span>
-                        <span>Excel Reports</span>
-                        <span>SQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. SISTEMA DE COTIZACIÓN -->
-            <div class="tarjeta-proyecto-horizontal">
-                <div class="multimedia-proyecto horizontal-video">
+            <!-- 1. SISTEMA DE COTIZACIÓN -->
+            <div class="tarjeta-cuadrada">
+                <div class="zona-multimedia video-horizontal">
                     <video controls>
                         <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
                     </video>
                 </div>
-                <div class="info-proyecto">
-                    <span class="categoria-tag">Utilidad Financiera</span>
-                    <h2>Sistema de Cotización</h2>
-                    <p>Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos al instante y calculando márgenes de ganancia netos.</p>
-                    <div class="tecnologias">
-                        <span>Python</span>
-                        <span>Herramienta Comercial</span>
+                <div class="cuerpo-tarjeta">
+                    <div class="encabezado-tarjeta">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Sistema de Cotización</h3>
                     </div>
+                    <p class="descripcion-tarjeta">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos o servicios al instante y calculando márgenes de ganancia de forma precisa.</p>
+                </div>
+                <div class="pie-tarjeta">
+                    <span class="pildora-tech">Automatización</span>
+                    <span class="pildora-tech">Python</span>
+                </div>
+            </div>
+
+            <!-- 2. SYSBELL BARBERÍA -->
+            <div class="tarjeta-cuadrada">
+                <div class="zona-multimedia video-horizontal">
+                    <video controls poster="assets/1.PNG">
+                        <source src="assets/demo-barberia.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <div class="encabezado-tarjeta">
+                        <i class="fas fa-cut"></i>
+                        <h3>Sysbell_Barberia</h3>
+                    </div>
+                    <p class="descripcion-tarjeta">Sistema desktop de gestión de base de datos para barberías. Diseñado para optimizar el control de clientes, citas y administración general de forma limpia.</p>
+                </div>
+                <div class="pie-tarjeta">
+                    <span class="pildora-tech">Desktop App</span>
+                    <span class="pildora-tech">SQLite</span>
+                </div>
+            </div>
+
+            <!-- 3. SYSBELL STORE POS (Con visor limpio) -->
+            <div class="tarjeta-cuadrada">
+                <div class="zona-multimedia imagen-contenedor">
+                    <!-- Mostramos la primera captura real adaptada correctamente al recuadro -->
+                    <img src="assets/1.PNG" alt="Sysbell Store POS">
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <div class="encabezado-tarjeta">
+                        <i class="fas fa-store"></i>
+                        <h3>Sysbell_Store (POS)</h3>
+                    </div>
+                    <p class="descripcion-tarjeta">Solución robusta para comercio minorista que automatiza ventas, control de inventarios, generación de facturas y reportes detallados en Excel.</p>
+                </div>
+                <div class="pie-tarjeta">
+                    <span class="pildora-tech">Ventas & POS</span>
+                    <span class="pildora-tech">Excel Reports</span>
+                </div>
+            </div>
+
+            <!-- 4. CHATBOT AGENTE IA (En su propio cuadrado alineado) -->
+            <div class="tarjeta-cuadrada">
+                <div class="zona-multimedia video-vertical-ajustado">
+                    <!-- Usamos contain para que el formato 9:16 se dibuje perfecto con barras negras sutiles a los lados sin estirarse -->
+                    <video controls poster="assets/1.PNG">
+                        <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <div class="encabezado-tarjeta">
+                        <i class="fas fa-robot"></i>
+                        <h3>Sysbell Master Barber</h3>
+                    </div>
+                    <p class="descripcion-tarjeta">Agente inteligente de reservas impulsado por IA. Atiende y agenda citas automáticamente vía Telegram las 24 horas del día, los 7 días de la semana.</p>
+                </div>
+                <div class="pie-tarjeta">
+                    <span class="pildora-tech">Llama 3.3</span>
+                    <span class="pildora-tech">Telegram Bot</span>
                 </div>
             </div>
 
