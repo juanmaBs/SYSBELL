@@ -1482,70 +1482,70 @@ video {
     text-align: left;
 }
 /* ==========================================================================
-   DISEÑO PROFESIONAL DE PROYECTOS (SYSBELL)
+   DISEÑO MINIMALISTA DE PROYECTOS (SYSBELL)
    ========================================================================== */
 
 .projects-container-view {
-    max-width: 1200px;
-    margin: 110px auto 60px auto;
-    padding: 0 20px;
+    max-width: 1140px;
+    margin: 100px auto 60px auto;
+    padding: 0 24px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 .main-projects-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 800;
 }
 
 .main-projects-title span {
     color: #00f2fe;
-    text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
 }
 
 .main-projects-subtitle {
     text-align: center;
     color: #a0aec0;
-    font-size: 1rem;
-    margin-bottom: 45px;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
 }
 
-/* Cuadrícula moderna 2x2 o adaptativa */
+/* Grid de proyectos perfecto */
 .projects-clean-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
-/* Tarjeta Cuadrada/Vertical Compacta con Esquinas Redondeadas Suaves */
+/* Tarjeta Cuadrada Compacta con Esquinas Redondeadas Suaves */
 .software-card {
-    background: #091124;
-    border: 1px solid rgba(0, 242, 254, 0.12);
-    border-radius: 24px; /* Esquinas muy redondeadas y estéticas */
+    background: #060d1f;
+    border: 1px solid rgba(0, 242, 254, 0.1);
+    border-radius: 20px; /* Esquinas súper redondeadas y pulidas */
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 520px; /* Altura perfecta e igual para todas */
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 4 / 5; /* Hace que las tarjetas se sientan más cuadradas y perfectas */
 }
 
 .software-card:hover {
-    transform: translateY(-8px);
-    border-color: #00f2fe;
-    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.15);
+    transform: translateY(-6px);
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 242, 254, 0.12);
 }
 
-/* Área de Video/Multimedia de la tarjeta */
+/* Contenedores multimedia */
 .card-media {
     width: 100%;
-    height: 200px;
+    height: 180px; /* Tamaño compacto */
     background: #020714;
-    position: relative;
     overflow: hidden;
-    border-bottom: 1px solid rgba(0, 242, 254, 0.08);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.05);
 }
 
 .video-wrapper {
@@ -1556,64 +1556,87 @@ video {
 .video-wrapper video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita bordes vacíos y encaja el video perfectamente */
+    object-fit: cover; /* Para videos horizontales */
 }
 
-/* CARRUSEL DE IMÁGENES DENTRO DE LA TARJETA POS */
-.slider-container {
+/* SOLUCIÓN AL FORMATO 9:16 (Video vertical del Chatbot) */
+.chatbot-media {
+    background: #01040a; /* Fondo ultra oscuro para el marco */
+}
+
+.vertical-video video {
+    object-fit: contain !important; /* Mantiene su formato vertical original (9:16) sin cortarse */
+}
+
+/* GALERÍA INTERACTIVA DE IMÁGENES (SISTEMA POS) */
+.card-media-gallery {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 180px;
+    background: #020714;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.05);
 }
 
-.slider-wrapper {
+/* Área de imagen grande */
+.main-image-container {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
 }
 
-.slide-img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.main-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Contenedor deslizante de miniaturas */
+.thumbnails-slider {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
-.slide-img.active {
-    opacity: 1;
+.thumbnails-slider::-webkit-scrollbar {
+    height: 4px;
 }
 
-/* Botones del carrusel */
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.thumbnails-slider::-webkit-scrollbar-thumb {
     background: rgba(0, 242, 254, 0.2);
-    border: none;
-    color: #ffffff;
-    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+/* Miniaturas */
+.thumb {
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.2s;
-    font-size: 0.8rem;
-    z-index: 5;
+    border: 1.5px solid transparent;
+    opacity: 0.6;
+    transition: opacity 0.2s, border-color 0.2s;
+    flex-shrink: 0;
 }
 
-.slider-btn:hover {
-    background: #00f2fe;
-    color: #000000;
+.thumb:hover, .thumb.active {
+    opacity: 1;
+    border-color: #00f2fe;
 }
 
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
-
-/* Cuerpo interno de la tarjeta */
+/* Cuerpo de la tarjeta */
 .card-body {
-    padding: 20px;
+    padding: 16px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -1623,33 +1646,33 @@ video {
 .card-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .card-header i {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #00f2fe;
 }
 
 .card-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffffff;
     margin: 0;
     font-weight: 700;
 }
 
 .card-description {
-    font-size: 0.88rem;
+    font-size: 0.82rem;
     color: #a0aec0;
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
 }
 
-/* Pie de la tarjeta */
+/* Pie de tarjeta */
 .card-footer {
-    padding: 15px 20px 20px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 12px 16px 16px 16px;
+    background: rgba(2, 7, 20, 0.2);
 }
 
 .tech-stack .badges {
@@ -1659,59 +1682,31 @@ video {
 }
 
 .tech-stack .badge {
-    background: rgba(0, 242, 254, 0.06);
+    background: rgba(0, 242, 254, 0.05);
     color: #00f2fe;
-    border: 1px solid rgba(0, 242, 254, 0.15);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    border: 1px solid rgba(0, 242, 254, 0.12);
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.7rem;
     font-weight: 600;
 }
 
-/* Detalles para destacar la tarjeta Premium de la IA */
+/* Estilos de la tarjeta Premium de IA */
 .premium-project-card {
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-color: rgba(212, 175, 55, 0.2);
 }
 
 .premium-project-card:hover {
     border-color: #d4af37;
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.1);
 }
 
 .gold-header i, .gold-header h3 {
     color: #d4af37 !important;
 }
 
-.gold-footer {
-    border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
-}
-
-/* QR Integrado de manera limpia */
-.qr-compact-inline {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.qr-thumb {
-    width: 45px;
-    height: 45px;
-    border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.qr-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.qr-text strong {
-    font-size: 0.8rem;
-    color: #d4af37;
-    letter-spacing: 0.5px;
-}
-
-.qr-text span {
-    font-size: 0.75rem;
-    color: #a0aec0;
+.gold-badge {
+    background: rgba(212, 175, 55, 0.05) !important;
+    color: #d4af37 !important;
+    border-color: rgba(212, 175, 55, 0.2) !important;
 }
