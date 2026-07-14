@@ -1758,168 +1758,168 @@ video {
     gap: 6px;
 }
 
-/* ==========================================================================
-   DISEÑO RESPONSIVO (PARA MÓVILES Y PANTALLAS PEQUEÑAS)
-   ========================================================================== */
+/* ==========================================
+   ESTILOS CORREGIDOS SECCIÓN PROYECTOS
+   ========================================== */
 
-@media (max-width: 900px) {
-    .project-row, .reverse-row {
-        flex-direction: column !important;
-        padding: 24px;
-        gap: 24px;
-    }
-
-    .project-media-col, .project-info-col {
-        flex: none;
-        width: 100%;
-    }
-
-    .vertical-video-frame {
-        width: 200px; /* Ligeramente más compacto en móviles */
-    }
-
-    .pos-images-slider img {
-        height: 170px; /* Reducción de tamaño para pantallas de teléfono */
-    }
-
-    .main-projects-title {
-        font-size: 2rem;
-    }
-/* Contenedor de Proyectos */
-.projects-container {
-    max-width: 1200px;
-    margin: 80px auto;
+.seccion-proyectos {
+    max-width: 1100px;
+    margin: 100px auto 60px auto;
     padding: 0 20px;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: sans-serif;
 }
 
-.projects-header {
+.proyectos-titulo-zona {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-.projects-header h1 {
-    font-size: 2.5rem;
+.proyectos-titulo-zona h1 {
+    font-size: 2.2rem;
     color: #ffffff;
-    font-weight: 800;
 }
 
-.projects-header h1 span {
+.proyectos-titulo-zona h1 span {
     color: #00f2fe;
-    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 }
 
-.projects-header p {
+.proyectos-titulo-zona p {
     color: #a0aec0;
-    margin-top: 10px;
     font-size: 1rem;
 }
 
-/* El Grid Moderno de 3 Columnas */
-.modern-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+/* Contenedor en fila hacia abajo */
+.lista-proyectos-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-/* Tarjeta Estilo Glassmorphism Avanzado */
-.project-card {
-    background: rgba(10, 17, 35, 0.7);
-    border: 1px solid rgba(0, 242, 254, 0.15);
+/* Tarjeta limpia */
+.tarjeta-proyecto-horizontal {
+    display: flex;
+    background: #0b111e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    gap: 30px;
+    align-items: center;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(0, 242, 254, 0.5);
-    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.15);
-}
-
-/* Tarjeta Destacada (Sysbell Store) */
-.featured-card {
-    border-color: rgba(212, 175, 55, 0.3);
-}
-.featured-card:hover {
-    border-color: rgba(212, 175, 55, 0.7);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
-}
-
-/* CONTENEDOR MULTIMEDIA: El truco para que nada se deforme */
-.card-media {
+/* Control estricto de multimedia para que NO se deforme */
+.multimedia-proyecto {
+    flex: 1;
+    max-width: 450px;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Fuerza la proporción de cine/pantalla estándar */
+    display: flex;
+    justify-content: center;
+}
+
+/* Video Horizontal 16:9 estándar */
+.horizontal-video video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
     background: #000;
-    overflow: hidden;
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.card-media video, 
-.card-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen o video al contenedor sin estirarlo */
-    display: block;
+/* Video Vertical para el Bot de Telegram */
+.vertical-video video {
+    width: 220px; /* Tamaño controlado de celular */
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    background: #000;
 }
 
-/* Contenido de la Tarjeta */
-.card-content {
-    padding: 24px;
+/* CONTROL DE CONTROL DE CAPTURAS DEL POS (Deslizador suave) */
+.slider-pos-contenedor {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    width: 100%;
+    background: #050811;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-.card-badge {
-    align-self: flex-start;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.slider-pos-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+}
+
+.slider-pos-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+.slider-pos-scroll::-webkit-scrollbar-thumb {
+    background: #00f2fe;
+    border-radius: 4px;
+}
+
+.slider-pos-scroll img {
+    height: 180px;
+    width: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.slider-aviso {
+    font-size: 0.75rem;
     color: #00f2fe;
-    background: rgba(0, 242, 254, 0.1);
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 15px;
+    margin-top: 6px;
+    text-align: center;
 }
 
-.card-badge.gold {
-    color: #d4af37;
-    background: rgba(212, 175, 55, 0.1);
+/* Texto Informativo */
+.info-proyecto {
+    flex: 1;
 }
 
-.card-content h3 {
+.categoria-tag {
+    font-size: 0.75rem;
+    color: #00f2fe;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.info-proyecto h2 {
+    font-size: 1.6rem;
     color: #ffffff;
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
-    font-weight: 700;
+    margin: 8px 0;
 }
 
-.card-content p {
-    color: #a0aec0;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
-    flex-grow: 1; /* Empuja los tags al fondo para que queden alineados */
+.info-proyecto p {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* Tags de Tecnología */
-.card-tags {
+.tecnologias {
     display: flex;
     gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.card-tags span {
-    font-size: 0.75rem;
-    color: #e2e8f0;
+.tecnologias span {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     padding: 4px 10px;
-    border-radius: 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .tarjeta-proyecto-horizontal {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .multimedia-proyecto {
+        max-width: 100%;
+    }
 }
