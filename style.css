@@ -1482,18 +1482,17 @@ video {
     text-align: left;
 }
 /* ==========================================================================
-   DISEÑO DE TARJETAS CUADRADAS Y REDONDEADAS (SYSBELL)
+   DISEÑO PROFESIONAL DE PROYECTOS (SYSBELL)
    ========================================================================== */
 
 .projects-container-view {
     max-width: 1200px;
-    margin: 100px auto 60px auto;
+    margin: 110px auto 60px auto;
     padding: 0 20px;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .main-projects-title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     text-align: center;
     color: #ffffff;
     margin-bottom: 8px;
@@ -1509,44 +1508,43 @@ video {
     text-align: center;
     color: #a0aec0;
     font-size: 1rem;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
-/* Grid de proyectos */
+/* Cuadrícula moderna 2x2 o adaptativa */
 .projects-clean-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-bottom: 60px;
+    align-items: stretch;
 }
 
-/* Tarjeta compacta, cuadrada y con esquinas MUY redondeadas */
-.projects-clean-grid .software-card {
-    background: #070f24;
-    border: 1px solid rgba(0, 242, 254, 0.15);
-    border-radius: 24px; /* Esquinas súper redondeadas y suaves */
+/* Tarjeta Cuadrada/Vertical Compacta con Esquinas Redondeadas Suaves */
+.software-card {
+    background: #091124;
+    border: 1px solid rgba(0, 242, 254, 0.12);
+    border-radius: 24px; /* Esquinas muy redondeadas y estéticas */
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 460px; /* Altura compacta para mantener aspecto cuadrado */
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    height: 520px; /* Altura perfecta e igual para todas */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.projects-clean-grid .software-card:hover {
-    transform: translateY(-6px);
+.software-card:hover {
+    transform: translateY(-8px);
     border-color: #00f2fe;
-    box-shadow: 0 15px 35px rgba(0, 242, 254, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.15);
 }
 
-/* Contenedor Multimedia */
+/* Área de Video/Multimedia de la tarjeta */
 .card-media {
     width: 100%;
-    height: 190px; /* Reducido para que la tarjeta sea más cuadrada */
-    background: #020813;
-    overflow: hidden;
+    height: 200px;
+    background: #020714;
     position: relative;
+    overflow: hidden;
     border-bottom: 1px solid rgba(0, 242, 254, 0.08);
 }
 
@@ -1558,77 +1556,75 @@ video {
 .video-wrapper video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta el video sin dejar franjas negras enormes */
+    object-fit: cover; /* Evita bordes vacíos y encaja el video perfectamente */
 }
 
-/* SOLUCIÓN AL DESBORDE: Deslizador Horizontal Estricto */
-.gallery-scroll-container {
+/* CARRUSEL DE IMÁGENES DENTRO DE LA TARJETA POS */
+.slider-container {
     width: 100%;
     height: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
 }
 
-.gallery-scroll-wrapper {
-    display: flex;
-    flex-wrap: nowrap; /* ¡OBLIGATORIO! Evita que las fotos se vayan hacia abajo */
-    gap: 10px;
-    overflow-x: auto; /* Scroll horizontal activo */
+.slider-wrapper {
     width: 100%;
-    padding-bottom: 8px;
+    height: 100%;
+    position: relative;
 }
 
-/* Estilo de la barra de scroll */
-.gallery-scroll-wrapper::-webkit-scrollbar {
-    height: 5px;
-}
-.gallery-scroll-wrapper::-webkit-scrollbar-thumb {
-    background: rgba(0, 242, 254, 0.3);
-    border-radius: 10px;
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Las imágenes de la galería */
-.gallery-scroll-wrapper img {
-    height: 130px; /* Altura controlada */
-    width: auto;
-    flex-shrink: 0; /* ¡OBLIGATORIO! Evita que las imágenes se aplasten */
-    border-radius: 14px; /* Esquinas redondeadas también en las capturas */
+.slide-img.active {
+    opacity: 1;
+}
+
+/* Botones del carrusel */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 242, 254, 0.2);
+    border: none;
+    color: #ffffff;
+    padding: 8px 12px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    border-radius: 50%;
+    transition: background 0.2s;
+    font-size: 0.8rem;
+    z-index: 5;
 }
 
-.gallery-scroll-wrapper img:hover {
-    transform: scale(1.03);
-    border-color: #00f2fe;
+.slider-btn:hover {
+    background: #00f2fe;
+    color: #000000;
 }
 
-.scroll-indicator {
-    display: block;
-    font-size: 0.75rem;
-    color: #00f2fe;
-    margin-top: 6px;
-    opacity: 0.8;
-    text-align: center;
-}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
 
-/* Información interna de la tarjeta */
+/* Cuerpo interno de la tarjeta */
 .card-body {
     padding: 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .card-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .card-header i {
@@ -1637,7 +1633,7 @@ video {
 }
 
 .card-header h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: #ffffff;
     margin: 0;
     font-weight: 700;
@@ -1646,14 +1642,14 @@ video {
 .card-description {
     font-size: 0.88rem;
     color: #a0aec0;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0;
 }
 
 /* Pie de la tarjeta */
 .card-footer {
     padding: 15px 20px 20px 20px;
-    background: rgba(2, 8, 19, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .tech-stack .badges {
@@ -1667,19 +1663,55 @@ video {
     color: #00f2fe;
     border: 1px solid rgba(0, 242, 254, 0.15);
     padding: 4px 10px;
-    border-radius: 20px; /* Badges redondeadas */
+    border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
 }
 
-/* Ajustes para la sección premium del Agente */
-.premium-section-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+/* Detalles para destacar la tarjeta Premium de la IA */
+.premium-project-card {
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.sysbell-premium-card {
-    border-radius: 28px !important; /* Esquinas súper redondeadas premium */
-    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+.premium-project-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+}
+
+.gold-header i, .gold-header h3 {
+    color: #d4af37 !important;
+}
+
+.gold-footer {
+    border-top: 1px solid rgba(212, 175, 55, 0.1) !important;
+}
+
+/* QR Integrado de manera limpia */
+.qr-compact-inline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.qr-thumb {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.qr-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.qr-text strong {
+    font-size: 0.8rem;
+    color: #d4af37;
+    letter-spacing: 0.5px;
+}
+
+.qr-text span {
+    font-size: 0.75rem;
+    color: #a0aec0;
 }
