@@ -22,16 +22,13 @@
 
     <main class="projects-container-view">
         <h1 class="main-projects-title">Mis <span>Desarrollos & Sistemas</span></h1>
-        <p class="main-projects-subtitle">Soluciones a medida para la optimización y modernización de negocios.</p>
+        <p class="main-projects-subtitle">Soluciones profesionales diseñadas a medida para la optimización de negocios.</p>
 
-        <!-- CUADRÍCULA DE PROYECTOS UNIFICADA -->
         <div class="projects-clean-grid">
 
-            <!-- 1. SISTEMA DE COTIZACIÓN -->
             <div class="software-card">
                 <div class="card-media">
                     <div class="video-wrapper">
-                        <!-- Ajusta el nombre del video si es necesario -->
                         <video controls>
                             <source src="assets/tu-video-cotizacion.mp4" type="video/mp4">
                             Tu navegador no soporta videos.
@@ -43,7 +40,7 @@
                         <i class="fas fa-calculator"></i>
                         <h3>Sistema de Cotización</h3>
                     </div>
-                    <p class="card-description">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos o servicios al instante y calculando márgenes de ganancia con reportes rápidos.</p>
+                    <p class="card-description">Programa diseñado para agilizar procesos comerciales, permitiendo cotizar productos o servicios al instante y calculando márgenes de ganancia de forma precisa.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
@@ -55,11 +52,10 @@
                 </div>
             </div>
 
-            <!-- 2. SYSBELL BARBERÍA -->
             <div class="software-card">
                 <div class="card-media">
                     <div class="video-wrapper">
-                        <video controls poster="assets/miniatura.jpg">
+                        <video controls poster="assets/1.PNG">
                             <source src="assets/demo-barberia.mp4" type="video/mp4">
                             Tu navegador no soporta videos.
                         </video>
@@ -70,7 +66,7 @@
                         <i class="fas fa-cut"></i>
                         <h3>Sysbell_Barberia</h3>
                     </div>
-                    <p class="card-description">Sistema de gestión integral de base de datos para barberías profesionales. Diseñado para optimizar el control de clientes, citas y administración interna de forma limpia y eficiente.</p>
+                    <p class="card-description">Sistema desktop de gestión de base de datos para barberías. Diseñado para optimizar el control de clientes, citas y administración general de forma limpia.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
@@ -82,25 +78,19 @@
                 </div>
             </div>
 
-            <!-- 3. TIENDAS & POS (Con galería miniatura ordenada) -->
             <div class="software-card">
                 <div class="card-media">
-                    <!-- Contenedor scroll horizontal para que las 11 capturas no estiren la tarjeta -->
-                    <div class="gallery-scroll-container">
-                        <div class="gallery-scroll-wrapper">
-                            <img src="assets/1.PNG" alt="Captura 1" onclick="zoomImage(this)">
-                            <img src="assets/2.PNG" alt="Captura 2" onclick="zoomImage(this)">
-                            <img src="assets/3.PNG" alt="Captura 3" onclick="zoomImage(this)">
-                            <img src="assets/4.PNG" alt="Captura 4" onclick="zoomImage(this)">
-                            <img src="assets/5.PNG" alt="Captura 5" onclick="zoomImage(this)">
-                            <img src="assets/6.PNG" alt="Captura 6" onclick="zoomImage(this)">
-                            <img src="assets/7.PNG" alt="Captura 7" onclick="zoomImage(this)">
-                            <img src="assets/8.PNG" alt="Captura 8" onclick="zoomImage(this)">
-                            <img src="assets/9.PNG" alt="Captura 9" onclick="zoomImage(this)">
-                            <img src="assets/10.PNG" alt="Captura 10" onclick="zoomImage(this)">
-                            <img src="assets/11.PNG" alt="Captura 11" onclick="zoomImage(this)">
+                    <div class="slider-container">
+                        <div class="slider-wrapper" id="posSlider">
+                            <img src="assets/1.PNG" class="slide-img active" alt="Captura 1">
+                            <img src="assets/2.PNG" class="slide-img" alt="Captura 2">
+                            <img src="assets/3.PNG" class="slide-img" alt="Captura 3">
+                            <img src="assets/4.PNG" class="slide-img" alt="Captura 4">
+                            <img src="assets/5.PNG" class="slide-img" alt="Captura 5">
+                            <img src="assets/6.PNG" class="slide-img" alt="Captura 6">
                         </div>
-                        <span class="scroll-indicator"><i class="fas fa-arrow-right"></i> Desliza para ver más</span>
+                        <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -108,58 +98,66 @@
                         <i class="fas fa-store"></i>
                         <h3>Sysbell_Store (POS)</h3>
                     </div>
-                    <p class="card-description">Solución robusta para comercio minorista que automatiza ventas, control estricto de inventarios, generación de facturas y reportes detallados exportables a Excel.</p>
+                    <p class="card-description">Solución robusta para comercio minorista que automatiza ventas, control de inventarios, generación de facturas y reportes detallados en Excel.</p>
                 </div>
                 <div class="card-footer">
                     <div class="tech-stack">
                         <div class="badges">
-                            <span class="badge">POS System</span>
+                            <span class="badge">Ventas & POS</span>
                             <span class="badge">Excel Reports</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <!-- 4. SECCIÓN PREMIUM: SYSBELL MASTER BARBER (Se mantiene abajo, imponente y centrada) -->
-        <div class="premium-section-wrapper">
-            <div class="software-card sysbell-premium-card central-compact">
-                <div class="card-header-premium">
-                    <span class="gold-badge">PROYECTO ESTRELLA</span>
-                    <h2 class="sysbell-title-glow">Sysbell <span>Master Barber</span></h2>
-                    <div class="title-separator-gold"></div>
-                    <p class="ia-subtitle">IA Premium: Llama 3.3 70B & Automatización</p>
-                </div>
-                <div class="video-wrapper-small">
-                    <div class="video-glow-frame">
-                        <video controls class="fixed-video-small">
+            <div class="software-card premium-project-card">
+                <div class="card-media">
+                    <div class="video-wrapper">
+                        <video controls poster="assets/QR.jpg">
                             <source src="assets/VIDEOAGENTES_IA.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
                         </video>
                     </div>
                 </div>
-                <div class="sysbell-footer-compact">
-                    <div class="qr-box-highlight">
-                        <div class="qr-animated-border-premium">
-                            <span></span>
-                            <img src="assets/QR.jpg" alt="QR" class="qr-img-large">
-                        </div>
-                        <div class="qr-label">
-                            <strong class="gold-text">DEMO INTERACTIVA</strong>
+                <div class="card-body">
+                    <div class="card-header gold-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Sysbell Master Barber</h3>
+                    </div>
+                    <p class="card-description">Agente conversacional inteligente impulsado por IA (Llama 3.3). Automatiza reservas y atiende a tus clientes vía Telegram 24/7 de forma premium.</p>
+                </div>
+                <div class="card-footer gold-footer">
+                    <div class="qr-compact-inline">
+                        <img src="assets/QR.jpg" alt="QR" class="qr-thumb">
+                        <div class="qr-text">
+                            <strong>DEMO ACTIVA</strong>
                             <span>Escanea para probar</span>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 
-    <!-- Modal para zoom de imágenes -->
-    <div id="imageModal" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgFull">
-    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-img');
+        
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
 
-    <script src="script.js"></script>
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+
+        // Cambio automático cada 4 segundos
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
 </body>
 </html>
