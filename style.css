@@ -1785,308 +1785,141 @@ video {
     .main-projects-title {
         font-size: 2rem;
     }
-}/* ==========================================================================
-   DISEÑO EN FILAS HORIZONTALES (PORTFOLIO SYSBELL PREMIUM)
-   ========================================================================== */
-
-.projects-modern-view {
+/* Contenedor de Proyectos */
+.projects-container {
     max-width: 1200px;
-    margin: 100px auto 80px auto;
-    padding: 0 24px;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: #ffffff;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-.projects-hero-header {
+.projects-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.main-projects-title {
+.projects-header h1 {
     font-size: 2.5rem;
-    margin-bottom: 12px;
+    color: #ffffff;
     font-weight: 800;
-    letter-spacing: -0.5px;
 }
 
-.main-projects-title span {
+.projects-header h1 span {
     color: #00f2fe;
-    text-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 }
 
-.main-projects-subtitle {
+.projects-header p {
     color: #a0aec0;
-    font-size: 1.05rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 1rem;
 }
 
-/* Contenedor principal de Filas */
-.projects-rows-container {
-    display: flex;
-    flex-direction: column;
-    gap: 70px; /* Separación generosa entre cada desarrollo */
+/* El Grid Moderno de 3 Columnas */
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
-/* Fila de proyecto general */
-.project-row {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background: linear-gradient(135deg, rgba(6, 13, 31, 0.8), rgba(2, 7, 20, 0.9));
-    border: 1px solid rgba(0, 242, 254, 0.08);
-    border-radius: 24px; /* Esquinas curvas súper fluidas */
-    padding: 35px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project-row:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 242, 254, 0.25);
-    box-shadow: 0 20px 50px rgba(0, 242, 254, 0.08);
-}
-
-/* Fila Premium de la IA (Efecto Dorado) */
-.premium-row {
-    border-color: rgba(212, 175, 55, 0.15);
-    background: linear-gradient(135deg, rgba(12, 15, 23, 0.9) 0%, rgba(5, 7, 12, 0.95) 100%);
-}
-
-.premium-row:hover {
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.08);
-}
-
-/* Inversión para alternancia en Zig-Zag */
-.reverse-row {
-    flex-direction: row-reverse;
-}
-
-/* Columnas internas */
-.project-media-col {
-    flex: 1.1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.project-info-col {
-    flex: 0.9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* --- MARCOS MULTIMEDIA --- */
-
-/* Marco de Video Horizontal */
-.horizontal-video-frame {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.horizontal-video-frame video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Respetando formato 9:16 vertical para el Agente IA de Reservas */
-.vertical-video-frame {
-    width: 250px; /* Ancho acotado para simular pantalla móvil perfecta */
-    aspect-ratio: 9 / 16;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #01040a;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.8);
-    border: 3px solid rgba(212, 175, 55, 0.3);
-}
-
-.vertical-video-frame video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* --- SLIDER DE CAPTURAS MOCKUP (SYSBELL STORE POS) --- */
-.pos-gallery-wrapper {
-    width: 100%;
-    background: #090e1a;
-    border-radius: 16px;
-    overflow: hidden;
+/* Tarjeta Estilo Glassmorphism Avanzado */
+.project-card {
+    background: rgba(10, 17, 35, 0.7);
     border: 1px solid rgba(0, 242, 254, 0.15);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-}
-
-.gallery-header-bar {
-    background: #050811;
-    padding: 10px 16px;
+    border-radius: 16px;
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    gap: 6px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-header-bar .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 242, 254, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.15);
 }
 
-.gallery-header-bar .dot.red { background: #ff5f56; }
-.gallery-header-bar .dot.yellow { background: #ffbd2e; }
-.gallery-header-bar .dot.green { background: #27c93f; }
+/* Tarjeta Destacada (Sysbell Store) */
+.featured-card {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+.featured-card:hover {
+    border-color: rgba(212, 175, 55, 0.7);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
 
-.gallery-header-bar .gallery-title {
-    font-size: 0.75rem;
-    color: #a0aec0;
-    margin-left: 10px;
-    font-family: monospace;
+/* CONTENEDOR MULTIMEDIA: El truco para que nada se deforme */
+.card-media {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Fuerza la proporción de cine/pantalla estándar */
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-media video, 
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen o video al contenedor sin estirarlo */
+    display: block;
+}
+
+/* Contenido de la Tarjeta */
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
-.gallery-header-bar .swipe-hint {
-    font-size: 0.75rem;
-    color: #00f2fe;
-}
-
-/* Contenedor del scroll horizontal de imágenes */
-.pos-images-slider {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 16px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-/* Scroll personalizado estético */
-.pos-images-slider::-webkit-scrollbar {
-    height: 6px;
-}
-
-.pos-images-slider::-webkit-scrollbar-thumb {
-    background: rgba(0, 242, 254, 0.3);
-    border-radius: 10px;
-}
-
-.pos-images-slider img {
-    height: 220px; /* Tamaño generoso para apreciar la UI claramente */
-    width: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    scroll-snap-align: start;
-    border: 1px solid rgba(255,255,255,0.05);
-    flex-shrink: 0;
-}
-
-/* --- INFORMACIÓN DEL PROYECTO --- */
-
-.project-badge {
+.card-badge {
     align-self: flex-start;
-    background: rgba(0, 242, 254, 0.08);
-    color: #00f2fe;
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    color: #00f2fe;
+    background: rgba(0, 242, 254, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
 }
 
-.gold-badge {
-    background: rgba(212, 175, 55, 0.08) !important;
-    color: #d4af37 !important;
-    border-color: rgba(212, 175, 55, 0.3) !important;
+.card-badge.gold {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
 }
 
-.project-title {
-    font-size: 1.8rem;
+.card-content h3 {
     color: #ffffff;
-    margin: 0 0 6px 0;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
     font-weight: 700;
 }
 
-.gold-text {
-    color: #d4af37;
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-}
-
-.project-tagline {
-    font-size: 0.95rem;
-    color: #00f2fe;
-    margin: 0 0 16px 0;
-    font-weight: 500;
-}
-
-.gold-text + .project-tagline {
-    color: #e5c158;
-}
-
-.project-description {
-    font-size: 0.88rem;
-    color: #cbd5e0;
+.card-content p {
+    color: #a0aec0;
+    font-size: 0.85rem;
     line-height: 1.6;
     margin: 0 0 20px 0;
+    flex-grow: 1; /* Empuja los tags al fondo para que queden alineados */
 }
 
-/* Etiquetas tecnológicas */
-.project-tech-pills {
+/* Tags de Tecnología */
+.card-tags {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
 }
 
-.project-tech-pills span {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #e2e8f0;
-    padding: 5px 12px;
-    border-radius: 8px;
+.card-tags span {
     font-size: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* ==========================================================================
-   DISEÑO RESPONSIVO (PARA MÓVILES Y PANTALLAS PEQUEÑAS)
-   ========================================================================== */
-
-@media (max-width: 900px) {
-    .project-row, .reverse-row {
-        flex-direction: column !important;
-        padding: 24px;
-        gap: 24px;
-    }
-
-    .project-media-col, .project-info-col {
-        flex: none;
-        width: 100%;
-    }
-
-    .vertical-video-frame {
-        width: 200px; /* Ligeramente más compacto en móviles */
-    }
-
-    .pos-images-slider img {
-        height: 170px; /* Reducción de tamaño para pantallas de teléfono */
-    }
-
-    .main-projects-title {
-        font-size: 2rem;
-    }
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
 }
