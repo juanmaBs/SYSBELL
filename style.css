@@ -1830,20 +1830,21 @@ video {
     object-fit: cover; /* Llena el recuadro perfectamente */
 }
 
-/* ¡LA SOLUCIÓN PARA EL VIDEO 9:16! */
-.video-vertical-ajustado video {
+/* ¡LA PORTADA SE ADAPTA AL CUADRADO COMPLETO! */
+.video-vertical-ajustado video.con-portada {
     width: 100%;
     height: 100%;
-    /* Por defecto, obligamos a que la miniatura (poster) se expanda y cubra todo el recuadro */
-    object-fit: cover !important; 
+    object-fit: cover !important; /* Estira la miniatura para rellenar todo el cuadrado */
     background: #000000;
 }
 
-/* Cuando el video ya se está reproduciendo, cambia automáticamente a contain para no cortar tu demo de celular */
-.video-vertical-ajustado video:active,
-.video-vertical-ajustado video:focus,
-.video-vertical-ajustado video:playing {
-    object-fit: contain !important;
+/* ¡EL VIDEO REAL CONSERVA SU FORMATO 9:16 PERFECTO AL DAR PLAY! */
+.video-vertical-ajustado video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* Ajusta el video vertical original sin recortar nada */
+    background: #000000;
+    transition: object-fit 0.3s ease; /* Transición suave opcional */
 }
 
 /* Contenido de la tarjeta */
