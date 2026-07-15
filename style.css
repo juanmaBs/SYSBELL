@@ -1834,8 +1834,16 @@ video {
 .video-vertical-ajustado video {
     width: 100%;
     height: 100%;
-    object-fit: contain !important; /* Mantiene la proporción nativa del celular sin estirarse */
-    background: #000000; /* Agrega fondo negro estético a los lados sobrantes */
+    /* Por defecto, obligamos a que la miniatura (poster) se expanda y cubra todo el recuadro */
+    object-fit: cover !important; 
+    background: #000000;
+}
+
+/* Cuando el video ya se está reproduciendo, cambia automáticamente a contain para no cortar tu demo de celular */
+.video-vertical-ajustado video:active,
+.video-vertical-ajustado video:focus,
+.video-vertical-ajustado video:playing {
+    object-fit: contain !important;
 }
 
 /* Contenido de la tarjeta */
