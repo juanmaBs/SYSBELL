@@ -116,5 +116,32 @@
         </div>
     </main>
 
+    <!-- CONTROL DE TRANSICIÓN PARA EL VIDEO VERTICAL (MINIATURA COMPLETA VS REPRODUCCIÓN 9:16) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videoIA = document.querySelector('.video-vertical-ajustado video');
+            
+            if (videoIA) {
+                // Al inicio, asignamos la clase para que la miniatura ocupe todo el espacio de la tarjeta
+                videoIA.classList.add('con-portada');
+
+                // Al dar Play, quitamos la clase para que respete su formato 9:16 original y se vea completo
+                videoIA.addEventListener('play', () => {
+                    videoIA.classList.remove('con-portada');
+                });
+
+                // Si se pausa o termina, devolvemos la clase para que vuelva a verse la portada impecable
+                videoIA.addEventListener('pause', () => {
+                    if (videoIA.currentTime === 0 || videoIA.paused) {
+                        videoIA.classList.add('con-portada');
+                    }
+                });
+
+                videoIA.addEventListener('ended', () => {
+                    videoIA.classList.add('con-portada');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
